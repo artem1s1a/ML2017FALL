@@ -20,7 +20,7 @@ def readTrain(path, label):
 
 
 def readTest(path):
-    with open('data/testing_data.txt', 'r', encoding='UTF-8') as f:
+    with open(f, 'r', encoding='UTF-8') as f:
         data = f.read().splitlines()
     del data[0]
 
