@@ -4,9 +4,9 @@ from util import *
 from gensim.models.word2vec import Word2Vec
 from keras.models import load_model
 import sys
-# import time
+import time
 
-# start_time = time.time()
+start_time = time.time()
 
 X = readTest(sys.argv[1])
 
@@ -47,5 +47,5 @@ y_test = (y > 0.5).astype(int)
 result = pd.DataFrame(y_test, columns=['label'])
 result.to_csv(sys.argv[2], index_label='id')
 
-# runtime = time.time() - start_time
-# print('{}min {}sec'.format(int(runtime / 60), (int(runtime)) % 60))
+runtime = time.time() - start_time
+print('{}min {}sec'.format(int(runtime / 60), (int(runtime)) % 60))
